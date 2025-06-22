@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQ X FILOU GAMES</title>
+    <style>
+        body {
+            background-color: black;
+            color: #BDFCC9; /* Textfarbe auf Pastellminze */
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh; /* Mindesthöhe des Bodys auf 100% des Viewports setzen */
+            margin: 0;
+            padding: 20px; /* Etwas Polsterung hinzufügen */
+            box-sizing: border-box; /* Polsterung in die Breite/Höhe einbeziehen */
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        p {
+            font-size: 1.2em;
+            margin-top: 0;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Abstand zwischen den Buttons */
+            margin-bottom: 50px;
+            width: 100%; /* Volle Breite für den Container auf kleineren Bildschirmen */
+            max-width: 300px; /* Maximale Breite für den Button-Container */
+        }
+        .game-button {
+            background-color: black; /* Hintergrundfarbe auf Schwarz */
+            color: white;
+            padding: 15px 20px; /* Polsterung reduziert, um Buttons schmaler zu machen */
+            border: 5px solid #BDFCC9; /* Dicker Pastell-Rahmen */
+            border-radius: 12px; /* Leicht abgerundete Ecken */
+            font-size: 1.5em;
+            cursor: pointer;
+            text-decoration: none; /* Unterstreichung bei Links entfernen */
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+            display: flex; /* Flexbox für Emoji und Text */
+            align-items: center; /* Vertikale Ausrichtung in der Mitte */
+            justify-content: flex-start; /* Emojis bleiben linksbündig */
+            box-sizing: border-box; /* Polsterung und Rahmen in die Breite einbeziehen */
+            width: 100%; /* Buttons nehmen die volle Breite des Containers ein */
+            position: relative; /* Für die absolute Positionierung des Texts */
+        }
+        .game-button span.emoji {
+            margin-right: 10px; /* Abstand zwischen Emoji und Text */
+            font-size: 1.2em; /* Größe des Emojis anpassen */
+            flex-shrink: 0; /* Emoji soll nicht schrumpfen */
+            z-index: 1; /* Sicherstellen, dass das Emoji über dem Text liegt */
+        }
+        .game-button span.button-text {
+            position: absolute; /* Absolute Positionierung für den Text */
+            left: 0;
+            right: 0;
+            text-align: center; /* Text zentrieren */
+            z-index: 0; /* Text unter dem Emoji platzieren, damit das Emoji sichtbar bleibt */
+            padding-left: 30px; /* Platz für das Emoji schaffen (geschätzt, kann angepasst werden) */
+            padding-right: 30px; /* Symmetrie für die Zentrierung */
+            box-sizing: border-box; /* Polsterung in die Breite einbeziehen */
+        }
+
+        .game-button:hover {
+            background-color: #555; /* Etwas hellerer Grau-Ton beim Hover */
+            border-color: #888; /* Rahmenfarbe beim Hover leicht aufhellen */
+        }
+        .copyright {
+            margin-top: auto; /* Sorgt dafür, dass das Copyright am unteren Rand bleibt */
+            text-align: center;
+            font-size: 0.9em;
+            color: #bbb; /* Leicht graue Farbe für Copyright */
+            line-height: 1.2; /* Zeilenabstand reduzieren, um die Zeilen näher zusammenzubringen */
+            padding-bottom: 10px; /* Etwas Polsterung am unteren Rand, damit es nicht ganz klebt */
+            width: 100%; /* Sicherstellen, dass der Copyright-Bereich die volle Breite nutzt */
+        }
+
+        /* Responsive Anpassungen */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            p {
+                font-size: 1em;
+            }
+            .game-button {
+                font-size: 1.2em;
+                padding: 12px 15px; /* Polsterung auf kleineren Bildschirmen weiter reduzieren */
+            }
+             .game-button span.button-text {
+                padding-left: 25px; /* Angepasster Abstand für kleinere Bildschirme */
+                padding-right: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>JQ X FILOU GAMES</h1>
+    <p>Online Browser Games</p>
+
+    <div class="button-container">
+        <a href="https://professorfilou.github.io/EmojiClick2001-ULTRA/" target="_blank" class="game-button"><span class="emoji">😃</span><span class="button-text">EMOJICLICK 2001</span></a>
+        <a href="https://jqgames.github.io/GEWINN-GEH-AB/" target="_blank" class="game-button"><span class="emoji">💕</span><span class="button-text">GEWINN GEH AB</span></a>
+        <a href="https://jqgames.github.io/CHICKEN-INVADERS/" target="_blank" class="game-button"><span class="emoji">🐔</span><span class="button-text">CHICKEN INVADERS</span></a>
+        <a href="https://jqgames.github.io/MEAT-THE-VEGGIE/" target="_blank" class="game-button"><span class="emoji">🍖</span><span class="button-text">MEAT THE VEGGIE</span></a>
+        <a href="https://jqgames.github.io/JANNIK-DAS-SPIEL/" target="_blank" class="game-button"><span class="emoji">🕶</span><span class="button-text">ICH BIN DER JANNIK</span></a>
+    </div>
+
+    <div class="copyright">
+        <p>Copyright 2025 JQ GAMES</p>
+        <p>Copyright 2025 ProfessorFilou</p>
+    </div>
+</body>
+</html>
